@@ -8,16 +8,12 @@
     >
       <p class="mr-2">Add Vouchers</p>
       <InputForm />
-      <button
-        class="bg-transparent hover:bg-teal-500 text-teal-700 font-semibold hover:text-white py-2 px-4 border border-teal-500 hover:border-transparent rounded ml-2"
-      >
-        Redeem
-      </button>
+      <SquareButton name="Redeem" />
     </div>
     <div class="container w-full mb-4 px-16 flex flex-row">
-      <FilterButton name="All Promotions" color="teal" />
-      <FilterButton name="Discounts" color="red" />
-      <FilterButton name="Free Redeems" color="blue" />
+      <RoundButton name="All Promotions" color="teal" />
+      <RoundButton name="Discounts" color="red" />
+      <RoundButton name="Free Redeems" color="blue" />
     </div>
     <div class="flex flex-wrap ">
       <PromotionCards
@@ -36,12 +32,14 @@
 <script>
 import PromotionCards from "./Cards/PromotionCards";
 import InputForm from "./InputField/InputForm";
-import FilterButton from "./Buttons/FilterButton";
+import RoundButton from "./Buttons/RoundButton";
+import SquareButton from "./Buttons/SquareButton";
 export default {
   components: {
     PromotionCards,
     InputForm,
-    FilterButton
+    RoundButton,
+    SquareButton
   },
   props: ["promotions", "image"],
   methods: {
